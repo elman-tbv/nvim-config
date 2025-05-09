@@ -22,7 +22,8 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 require("mason").setup()
-require("mason-lspconfig").setup_handlers({
+require("mason-lspconfig").setup({
+
   function(server_name)
     require("lspconfig")[server_name].setup {
       on_attach = on_attach,
@@ -39,5 +40,5 @@ require("mason-lspconfig").setup_handlers({
         telemetry = { enable = false },
       },
     }
-  end
+  end,
 })
