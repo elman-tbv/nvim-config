@@ -35,7 +35,8 @@ return {
     end
   },
 
-  "williamboman/mason.nvim",
+  "williamboman/mason.nvim", -- provides lsp servers
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
+  "folke/neodev.nvim",  -- configures lua-lsp for Neovim
 }
