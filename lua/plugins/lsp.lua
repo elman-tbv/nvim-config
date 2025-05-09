@@ -43,4 +43,12 @@ require("mason-lspconfig").setup({
       },
     }
   end,
+
+  ["clangd"] = function()
+    require('lspconfig').clangd.setup{
+      filetypes = {'c', 'cpp', 'h', 'hpp'},
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  end
 })
