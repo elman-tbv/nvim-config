@@ -36,14 +36,19 @@ return {
   },
 
   "williamboman/mason.nvim", -- provides lsp servers
-  "williamboman/mason-lspconfig.nvim",
+  "williamboman/mason-lspconfig.nvim", -- integrates with nvim lsp server
   "neovim/nvim-lspconfig",
   "folke/neodev.nvim",  -- configures lua-lsp for Neovim
 
-  -- complitetion
+  -- completion
   {
-    "hrsh7th/nvim-cmp",
-    dependencies = {'hrsh7th/cmp-nvim-lsp'},
+    "hrsh7th/nvim-cmp", -- code completion menu
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp', -- integrates with nvim lsp client
+      'L3MON4D3/LuaSnip', -- snippet engine
+      'saadparwaiz1/cmp_luasnip', -- integrates snippet engine with cmp
+      'rafamadriz/friendly-snippets', -- snippet collection for different languages
+    },
   },
 
   -- highlighting
