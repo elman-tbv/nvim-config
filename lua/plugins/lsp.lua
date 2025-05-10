@@ -11,6 +11,7 @@ local on_attach = function(_, bufnr)
   bufmap('gD', vim.lsp.buf.declaration)
   bufmap('gI', vim.lsp.buf.implementation)
   bufmap('<leader>D', vim.lsp.buf.type_definition)
+  bufmap('gq', vim.lsp.buf.format)
 
   bufmap('K', vim.lsp.buf.hover)
 
