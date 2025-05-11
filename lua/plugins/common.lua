@@ -1,10 +1,10 @@
 return {
 
-  -- comment/uncomment 
+  -- comment/uncomment
   {
     "numToStr/Comment.nvim",
     config = function()
-    require("Comment").setup()
+      require("Comment").setup()
     end
   },
 
@@ -35,18 +35,18 @@ return {
     end
   },
 
-  "williamboman/mason.nvim", -- provides lsp servers
+  "williamboman/mason.nvim",           -- provides lsp servers
   "williamboman/mason-lspconfig.nvim", -- integrates with nvim lsp server
   "neovim/nvim-lspconfig",
-  "folke/neodev.nvim",  -- configures lua-lsp for Neovim
+  "folke/neodev.nvim",                 -- configures lua-lsp for Neovim
 
   -- completion
   {
-    "hrsh7th/nvim-cmp", -- code completion menu
+    "hrsh7th/nvim-cmp",               -- code completion menu
     dependencies = {
-      'hrsh7th/cmp-nvim-lsp', -- integrates with nvim lsp client
-      'L3MON4D3/LuaSnip', -- snippet engine
-      'saadparwaiz1/cmp_luasnip', -- integrates snippet engine with cmp
+      'hrsh7th/cmp-nvim-lsp',         -- integrates with nvim lsp client
+      'L3MON4D3/LuaSnip',             -- snippet engine
+      'saadparwaiz1/cmp_luasnip',     -- integrates snippet engine with cmp
       'rafamadriz/friendly-snippets', -- snippet collection for different languages
     },
   },
@@ -55,5 +55,21 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ':TSUpdate',
-  }
+  },
+
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
 }
