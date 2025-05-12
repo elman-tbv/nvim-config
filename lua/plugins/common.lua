@@ -40,6 +40,15 @@ return {
   "neovim/nvim-lspconfig",
   "folke/neodev.nvim",                 -- configures lua-lsp for Neovim
 
+  "mfussenegger/nvim-dap",             -- provides lsp servers
+  "jay-babu/mason-nvim-dap.nvim",
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "nvim-neotest/nvim-nio"
+    },
+  },
+
   -- completion
   {
     "hrsh7th/nvim-cmp",               -- code completion menu
