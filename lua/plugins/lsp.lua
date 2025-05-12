@@ -26,10 +26,11 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require("mason").setup()
-require("mason-lspconfig").setup{
+require("mason-lspconfig").setup {
   automatic_enable = {
     exclude = {}
-  }
+  },
+  ensure_installed = { 'lua_ls', 'clangd', 'neocmake' }
 }
 
 local lsp_config = vim.lsp.config
