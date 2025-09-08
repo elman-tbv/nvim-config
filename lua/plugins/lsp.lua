@@ -30,7 +30,7 @@ require("mason-lspconfig").setup {
   automatic_enable = {
     exclude = {}
   },
-  ensure_installed = { 'lua_ls', 'clangd', 'neocmake' }
+  ensure_installed = { 'lua_ls', 'neocmake' }
 }
 
 local lsp_config = vim.lsp.config
@@ -62,5 +62,14 @@ lsp_config.clangd = {
 lsp_config.neocmake = {
   filetypes = { 'cmake', 'CMakeLists.txt' },
   on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+lsp_config.rust_analyzer = {
+  checkOnSave = { command = "cargo check" },
+  on_attach = on_attach,
+  enable = true,
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
   capabilities = capabilities,
 }
