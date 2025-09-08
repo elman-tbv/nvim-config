@@ -86,4 +86,24 @@ return {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
+
+  {
+    'Civitasv/cmake-tools.nvim',
+    opts = {}
+  },
+
+  -- flexible cmdline and messages
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    lazy = false,
+    config = function()
+      require('noice').setup()
+    end
+  }
+
 }
