@@ -104,6 +104,24 @@ return {
     config = function()
       require('noice').setup()
     end
-  }
+  },
+
+  {
+    'simrat39/rust-tools.nvim',
+    config = function()
+      require("rust-tools").setup()
+    end
+  },
+  {
+    "chrisgrieser/nvim-origami",
+    event = "VeryLazy",
+    opts = {}, -- needed even when using default config
+
+    -- recommended: disable vim's auto-folding
+    init = function()
+      vim.opt.foldlevel = 99
+      vim.opt.foldlevelstart = 99
+    end,
+  },
 
 }
