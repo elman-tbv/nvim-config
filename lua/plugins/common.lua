@@ -124,4 +124,15 @@ return {
     end,
   },
 
+  {
+    "NotAShelf/direnv.nvim",
+    priority = 1000,
+    lazy = false,
+    config = function()
+      require('direnv').setup({
+        autoload_direnv = true,
+      })
+    end,
+  },
+
 }
