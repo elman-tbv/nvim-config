@@ -55,6 +55,7 @@ lsp_config.lua_ls = {
 
 lsp_config.clangd = {
   filetypes = { 'c', 'cpp', 'h', 'hpp' },
+  cmd = { 'clangd --clang-tidy --experimental-modules-support' },
   on_attach = on_attach,
   capabilities = capabilities,
 }
