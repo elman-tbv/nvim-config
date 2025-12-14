@@ -107,12 +107,6 @@ return {
   },
 
   {
-    'simrat39/rust-tools.nvim',
-    config = function()
-      require("rust-tools").setup()
-    end
-  },
-  {
     "chrisgrieser/nvim-origami",
     event = "VeryLazy",
     opts = {}, -- needed even when using default config
@@ -134,5 +128,19 @@ return {
       })
     end,
   },
+
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^6',
+    lazy = false,
+  },
+
+  {
+    'mrcjkb/haskell-tools.nvim',
+    version = '^6',
+    lazy = false,
+  },
+
+
 
 }

@@ -55,7 +55,7 @@ lsp_config.lua_ls = {
 
 lsp_config.clangd = {
   filetypes = { 'c', 'cpp', 'h', 'hpp' },
-  cmd = { 'clangd --clang-tidy --experimental-modules-support' },
+  --cmd = { 'clangd --clang-tidy --experimental-modules-support' },
   on_attach = on_attach,
   capabilities = capabilities,
 }
@@ -74,3 +74,10 @@ lsp_config.rust_analyzer = {
   filetypes = { 'rust' },
   capabilities = capabilities,
 }
+
+-- lsp_config.hls = {
+--   enable = true,
+--   on_attach = on_attach,
+--   cmd = { "haskell-language-server-wrapper", "--lsp" },
+--   capabilities = capabilities,
+-- }
