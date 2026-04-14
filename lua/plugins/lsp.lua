@@ -55,7 +55,7 @@ lsp_config.lua_ls = {
 
 lsp_config.clangd = {
   filetypes = { 'c', 'cpp', 'h', 'hpp', 'cppm' },
-  cmd = { "clangd", "--experimental-modules-support" },
+  cmd = { "clangd", "--clang-tidy", "--experimental-modules-support" },
   on_attach = on_attach,
   capabilities = capabilities,
 }
@@ -64,6 +64,14 @@ lsp_config.neocmake = {
   filetypes = { 'cmake', 'CMakeLists.txt' },
   on_attach = on_attach,
   capabilities = capabilities,
+  init_options = {
+    format = {
+      enable = true
+    },
+    lint = {
+      enable = true
+    }
+  }
 }
 
 lsp_config.rust_analyzer = {
@@ -75,9 +83,16 @@ lsp_config.rust_analyzer = {
   capabilities = capabilities,
 }
 
--- lsp_config.hls = {
---   enable = true,
---   on_attach = on_attach,
---   cmd = { "haskell-language-server-wrapper", "--lsp" },
---   capabilities = capabilities,
--- }
+lsp_config.nixd = {
+  filetypes = { 'nix' },
+  enable = true,
+  capabilities = capabilities,
+}
+
+lsp_config.asm_lsp = {
+  --cmd = "asm-lsp",
+  on_attach = on_attach,
+  --filetypes = { 's', 'S' },
+  enable = true,
+  capabilities = capabilities,
+}
