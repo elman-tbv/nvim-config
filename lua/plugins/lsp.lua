@@ -41,10 +41,7 @@ lsp_config('*', {
 })
 
 lsp_config.lua_ls = {
-  on_attach = function()
-    require('neodev').setup()
-    on_attach(unpack(arg))
-  end,
+  on_attach = on_attach,
   filetypes = { 'lua' },
   capabilities = capabilities,
   Lua = {

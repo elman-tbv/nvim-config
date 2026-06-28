@@ -43,9 +43,20 @@ return {
   "williamboman/mason.nvim",           -- provides lsp servers
   "williamboman/mason-lspconfig.nvim", -- integrates with nvim lsp server
   "neovim/nvim-lspconfig",
-  "folke/neodev.nvim",                 -- configures lua-lsp for Neovim
 
-  "mfussenegger/nvim-dap",             -- provides lsp servers
+  {
+    "folke/lazydev.nvim", -- properly configures LuaLS for editing nvim config
+    ft = "lua",           -- only load on lua files
+    opts = {
+      library = {
+        -- See the configuration section for more details
+        -- Load luvit types when the `vim.uv` word is found
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+
+  "mfussenegger/nvim-dap", -- provides lsp servers
   "jay-babu/mason-nvim-dap.nvim",
   {
     "rcarriga/nvim-dap-ui",
