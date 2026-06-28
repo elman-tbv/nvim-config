@@ -106,9 +106,6 @@ return {
       "rcarriga/nvim-notify",
     },
     lazy = false,
-    config = function()
-      require('noice').setup()
-    end
   },
 
   {
