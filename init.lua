@@ -6,6 +6,7 @@ require "plugins.lsp"
 require "plugins.treesitter"
 require "plugins.dap"
 require "plugins.noice"
+require "plugins.telescope"
 
 vim.cmd.colorscheme("gruvbox")
 
