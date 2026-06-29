@@ -80,6 +80,15 @@ lsp_config.rust_analyzer = {
   capabilities = capabilities,
 }
 
+lsp_config.crates = {
+  on_attach = on_attach,
+  enable = true,
+  capabilities = capabilities,
+  actions = true,
+  completion = true,
+  hover = true,
+}
+
 lsp_config.nixd = {
   filetypes = { 'nix' },
   enable = true,
