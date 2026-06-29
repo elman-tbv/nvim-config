@@ -1,13 +1,5 @@
 return {
 
-  -- comment/uncomment
-  {
-    "numToStr/Comment.nvim",
-    config = function()
-      require("Comment").setup()
-    end
-  },
-
   -- colorscheme
   {
     "catppuccin/nvim",
