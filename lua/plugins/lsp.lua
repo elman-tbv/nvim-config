@@ -30,7 +30,7 @@ require("mason-lspconfig").setup {
   automatic_enable = {
     exclude = {}
   },
-  ensure_installed = { 'lua_ls', 'neocmake' }
+  ensure_installed = { 'lua_ls', }
 }
 
 local lsp_config = vim.lsp.config
@@ -77,6 +77,11 @@ lsp_config.rust_analyzer = {
   enable = true,
   cmd = { 'rust-analyzer' },
   filetypes = { 'rust' },
+  capabilities = capabilities,
+}
+
+lsp_config.bashls = {
+  enable = true,
   capabilities = capabilities,
 }
 
