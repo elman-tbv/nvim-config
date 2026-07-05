@@ -138,15 +138,6 @@ return {
   },
 
   {
-    'saecki/crates.nvim',
-    tag = 'stable',
-    event = { "BufRead Cargo.toml" },
-    config = function()
-      require('crates').setup()
-    end,
-  },
-
-  {
     'mrcjkb/haskell-tools.nvim',
     version = '^6',
     lazy = false,
